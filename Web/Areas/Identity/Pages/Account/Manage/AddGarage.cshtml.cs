@@ -23,7 +23,7 @@ namespace Web.Areas.Identity.Pages.Account.Manage
 
             var user = await _userManager.GetUserAsync(User);
             var userName = await _userManager.GetUserNameAsync(user);
-            var key = "AIzaSyCRGGtqvvF0htHQ4wmuvF0srTAFsG-nO6E";
+            var key = "KEY";
             var photoURL = $"https://maps.googleapis.com/maps/api/streetview?size=600x300&location={address}&key={key}";
 
             ParkingGarage garage = await _parkingGarageService.AddParkingGarage(name, address, longitude, latitude, numSpots, environment, userName, photoURL);
